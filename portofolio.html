@@ -211,10 +211,10 @@
 </footer>
 
 <script>
-  // Intersection Observer untuk efek scroll berulang
+  
   const observerOptions = {
-    threshold: 0.1, // Elemen terlihat 10% untuk memicu efek
-    rootMargin: '0px 0px -50px 0px' // Offset agar efek muncul sedikit sebelum elemen sepenuhnya terlihat
+    threshold: 0.1, 
+    rootMargin: '0px 0px -50px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -222,12 +222,12 @@ const observer = new IntersectionObserver((entries) => {
 if (entry.isIntersecting) {
         entry.target.classList.add('visible');
 } else {
-        entry.target.classList.remove('visible'); // Hapus kelas saat keluar viewport untuk efek berulang
+        entry.target.classList.remove('visible'); 
 }
     });
 }, observerOptions);
 
-  // Amati semua elemen yang ingin diberi efek
+
 document.querySelectorAll('section, h2, .card, footer').forEach(el => {
     observer.observe(el);
 });
